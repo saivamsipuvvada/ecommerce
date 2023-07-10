@@ -10,7 +10,7 @@ app=Flask(__name__)
 mydb=mysql.connector.connect(
     host='localhost',
     user='root',
-    password='sai1',
+    password='enter your password',
     db='ecommerce')
 app.secret_key = 'sdsrvwsdcsdsrweefwed'
 @app.route('/reg',methods=['GET','POST'])
@@ -55,7 +55,7 @@ def login():
                 session[session['username']]={}
             return redirect(url_for('home'))
         else:
-            return 'Invalid Username and password'
+            return 'Invalid Username and password '
     return render_template('login.html')
 @app.route('/',methods=['GET','POST'])
 def home():
